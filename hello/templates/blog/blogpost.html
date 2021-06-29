@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+<title>    {% block title  %}   Blogpost    {% endblock title  %}      <title>
+
+
+
+
+
+
+{% block body  %}
+
+
+  <h1> Blogpost  <h1>
+<h2> about forest  </h2>
+
+
+
+
+{% for post in allPost  %}
+
+  {{post.title}}
+
+{% endfor %}
+
+
+
+{% endblock body  %}
+

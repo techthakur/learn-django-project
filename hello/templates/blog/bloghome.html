@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+<title>    {% block title  %}   Bloghome    {% endblock title  %}      <title>
+
+
+
+
+{% block body  %}
+
+ {% if  user.is_authenticated %}
+
+{% for post in allPostsss %}
+
+<br> 
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"> {{post.title}} </h5>
+    <p class="card-text"> {{post.content}} </p>
+    <a href="{{post.content}}" class="btn btn-primary">  Artical by  {{post.author}} </a>
+  </div>
+</div>
+
+{% endfor %}
+
+{% else %}
+  <!---  <meta http-equiv="REFRESH" content="0;url= / ">   -->     <!-- this is used to go redirect home page  -->
+   <h3> please first login then you read My this blog post <h3> 
+   <b> Thank you </p>  
+
+
+
+  {%  endif  %}
+
+
+
+
+
+
+{% endblock body  %}
+
+
+
+
